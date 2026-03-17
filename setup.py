@@ -26,6 +26,9 @@ setup(
             'r2occupancy = auto_nav.r2occupancy:main',
             'r2occupancy2 = auto_nav.r2occupancy2:main',
             'r2auto_nav = auto_nav.r2auto_nav:main',
+            'frontier_detector = auto_nav.frontier_detector:main',
+            'lidar_tester = auto_nav.lidar_tester:main',
+            'navigator = auto_nav.navigator:main',
         ],
     },
 )
