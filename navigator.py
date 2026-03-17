@@ -84,6 +84,7 @@ class AutoNav(Node):
         # no obstacle detected in front, move forward
         else:
             self.get_logger().info('no obstacle detected, moving forward')
+            self.get_logger().info('Shortest distance at %i degrees' % nearest_idx)
             twist = Twist()
             twist.linear.x = speedchange
             twist.angular.z = 0.0
