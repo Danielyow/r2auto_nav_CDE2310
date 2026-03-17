@@ -1,6 +1,6 @@
 from setuptools import setup
 
-package_name = 'auto_nav'
+package_name = 'simple_nav'
 
 setup(
     name=package_name,
@@ -20,15 +20,15 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'r2mover = auto_nav.r2mover:main',
-            'r2moverotate = auto_nav.r2moverotate:main',
-            'r2scanner = auto_nav.r2scanner:main',
-            'r2occupancy = auto_nav.r2occupancy:main',
-            'r2occupancy2 = auto_nav.r2occupancy2:main',
-            'r2auto_nav = auto_nav.r2auto_nav:main',
-            'frontier_detector = auto_nav.frontier_detector:main',
-            'lidar_tester = auto_nav.lidar_tester:main',
-            'navigator = auto_nav.navigator:main',
+            'r2mover = simple_nav.r2mover:main',
+            'r2moverotate = simple_nav.r2moverotate:main',
+            'r2scanner = simple_nav.r2scanner:main',
+            'r2occupancy = simple_nav.r2occupancy:main',
+            'r2occupancy2 = simple_nav.r2occupancy2:main',
+            'r2auto_nav = simple_nav.r2auto_nav:main',
+            'frontier_detector = simple_nav.frontier_detector:main',
+            'lidar_tester = simple_nav.lidar_tester:main',
+            'navigator = simple_nav.navigator:main',
         ],
     },
 )

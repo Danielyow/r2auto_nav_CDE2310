@@ -12,7 +12,7 @@ import time
 # constants for tuning
 rotatechange = 0.1
 speedchange = 0.05
-stop_distance = 0.25
+stop_distance = 1.0
 front_angle = 30
 front_angles = range(-front_angle,front_angle+1,1)
 turn_duration = 3.0
@@ -105,10 +105,16 @@ def main(args=None):
         rclpy.spin(auto_nav)
     except KeyboardInterrupt:
         auto_nav.get_logger().info('Ctrl+C detected! Stopping robot...')
-        auto_nav.stopbot()
+        try:
+            auto_nav.stopbot()
+        except Exception as e:
+            auto_nav.get_logger().error(f'Failed to stop robot: {e}')
     finally:
         auto_nav.destroy_node()
-        rclpy.shutdown()
+        try:
+            rclpy.shutdown()
+        except Exception as e:
+            pass  # Ignore shutdown errors
 
 if __name__ == '__main__':
     main()
